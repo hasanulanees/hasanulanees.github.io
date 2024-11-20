@@ -17,7 +17,7 @@ body {
     /* background: url(../images/page-bg.jpg) no-repeat center center fixed; */
     background:
         linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-        url(../images/page-bg-ai.jpg) no-repeat center center fixed;
+        url(../images/RC19.gif) no-repeat center center fixed;
     /* background: url(../images/page-bg-ai.jpg) no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -228,7 +228,8 @@ html {
     left: 10%;
     -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
     -webkit-overflow-scrolling: touch;
-    background-color: #4C5270;
+    /* background-color: #4C5270; */
+    background: linear-gradient(#274472, #167D7F);
     box-sizing: border-box;
     height: 100vh;
     max-height: 100vh !important;
@@ -313,7 +314,8 @@ html {
 .section-heading .line-dec {
     width: 60px;
     height: 3px;
-    background-color: #4C5270;
+    /* background-color: #4C5270; */
+    background: linear-gradient(#274472, #167D7F);
     margin: 10px auto;
 }
 
@@ -340,7 +342,8 @@ html {
 }
 
 .white-button a:hover {
-    background-color: #4C5270;
+    /* background-color: #4C5270; */
+    background: linear-gradient(#274472, #167D7F);
     color: #fff;
 }
 
@@ -361,7 +364,8 @@ button {
 
 button:hover {
     outline: none;
-    background-color: #4C5270;
+    /* background-color: #4C5270; */
+    background: linear-gradient(#274472, #167D7F);
     color: #fff;
 }
 
@@ -394,6 +398,28 @@ button:hover {
     margin-top: 30px;
 }
 
+/*contact */
+.contact-item {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgba(250, 250, 250, 0.1);
+    transition: all 0.5s;
+}
+
+.contact-item img {
+    margin-right: 20px;
+}
+
+.contact-item a {
+    color: white;
+}
+
+.contact-item:hover {
+    /* background-color: rgba(250, 250, 250, 1); */
+    background: linear-gradient(#274472, #167D7F);
+}
+
 
 /* Services */
 
@@ -404,7 +430,8 @@ button:hover {
 
 .service-item {
     margin-bottom: 10px;
-    padding: 50px;
+    border-radius: 5px;
+    padding: 35px;
     background-color: rgba(250, 250, 250, 0.1);
     transition: all 0.5s;
 }
@@ -418,11 +445,13 @@ button:hover {
 }
 
 .service-item:hover {
-    background-color: rgba(250, 250, 250, 1);
+    /* background-color: rgba(250, 250, 250, 1); */
+    background: linear-gradient(#274472, #167D7F);
 }
 
 .service-item:hover h4 {
-    color: #1e1e1e;
+    /* color: #1e1e1e; */
+    color: white;
 }
 
 .service-item:hover p {
@@ -590,7 +619,8 @@ figure.snip1321 span {
 figure.snip1321 i {
     position: relative !important;
     font-size: 18px;
-    background-color: #4C5270;
+    background: linear-gradient(#274472, #167D7F);
+    /* background-color: #4C5270; */
     width: 40px;
     height: 40px;
     display: inline-block;
@@ -641,6 +671,13 @@ figure.snip1321.hover:after {
     -webkit-transform: rotateX(0);
     transform: rotateX(0);
     opacity: 0.9;
+}
+
+.skills-header {
+    background: linear-gradient(#274472, rgba(250, 250, 250, 0.1));
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 22px;
 }
 
 
