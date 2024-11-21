@@ -14,10 +14,10 @@ body {
 }
 
 #page-wraper {
-    /* background: url(../images/page-bg.jpg) no-repeat center center fixed; */
+    /* background: #000; */
     background:
         linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-        url(../images/RC19.gif) no-repeat center center fixed;
+        url(../images/7ZwC.gif) no-repeat center center fixed;
     /* background: url(../images/page-bg-ai.jpg) no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -25,6 +25,8 @@ body {
     background-size: cover;
     width: 100%;
 }
+
+
 
 
 /* Basic */
@@ -229,7 +231,8 @@ html {
     -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
     -webkit-overflow-scrolling: touch;
     /* background-color: #4C5270; */
-    background: linear-gradient(#274472, #167D7F);
+    background-image: linear-gradient(45deg, #614385 0%, #516395 100%);
+    /* background: linear-gradient(#274472, #167D7F); */
     box-sizing: border-box;
     height: 100vh;
     max-height: 100vh !important;
@@ -401,14 +404,21 @@ button:hover {
 /*contact */
 .contact-item {
     padding: 20px;
-    margin: 10px;
+    margin-bottom: 25px;
     border-radius: 5px;
     background-color: rgba(250, 250, 250, 0.1);
     transition: all 0.5s;
 }
 
+/* .contact-item img {
+    margin-right: 20px;
+} */
+
 .contact-item img {
     margin-right: 20px;
+    width: 80px;
+    padding: 5px;
+    background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
 }
 
 .contact-item a {
@@ -417,7 +427,7 @@ button:hover {
 
 .contact-item:hover {
     /* background-color: rgba(250, 250, 250, 1); */
-    background: linear-gradient(#274472, #167D7F);
+    background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
 }
 
 
@@ -429,11 +439,12 @@ button:hover {
 }
 
 .service-item {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     border-radius: 5px;
     padding: 35px;
     background-color: rgba(250, 250, 250, 0.1);
     transition: all 0.5s;
+    /* border: 2px dashed #516395; */
 }
 
 .service-item h4 {
@@ -444,9 +455,19 @@ button:hover {
     transition: all 0.5s;
 }
 
+.service-item i {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
+    border-radius: 50%;
+}
+
 .service-item:hover {
     /* background-color: rgba(250, 250, 250, 1); */
-    background: linear-gradient(#274472, #167D7F);
+    background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
+    /* border: 2px dashed #fff; */
+    /* background: linear-gradient(#274472, #167D7F); */
 }
 
 .service-item:hover h4 {
@@ -674,7 +695,8 @@ figure.snip1321.hover:after {
 }
 
 .skills-header {
-    background: linear-gradient(#274472, rgba(250, 250, 250, 0.1));
+    background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
+    /* background: linear-gradient(#274472, rgba(250, 250, 250, 0.1)); */
     padding: 8px;
     border-radius: 5px;
     font-size: 22px;
