@@ -28,6 +28,11 @@ body {
 
 
 
+.anees-bg {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+        url(../images/logo_anees.png) no-repeat center center fixed;
+}
 
 /* Basic */
 
@@ -56,6 +61,7 @@ p {
     background: -webkit-linear-gradient(#614385, #516395);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px #fff);
 }
 
 h4 {
@@ -125,8 +131,8 @@ html {
 }
 
 .main-nav li a {
-    height: 70px;
-    line-height: 70px;
+    height: 65px;
+    line-height: 65px;
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
@@ -433,6 +439,28 @@ button:hover {
 
 .contact-item:hover {
     /* background-color: rgba(250, 250, 250, 1); */
+    background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
+}
+
+
+
+.experience-item {
+    margin-bottom: 25px;
+    border-radius: 5px;
+    padding: 25px;
+    background-color: rgba(250, 250, 250, 0.1);
+    transition: all 0.5s;
+    /* border: 2px dashed #516395; */
+}
+
+.experience-item:hover {
+    background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
+}
+
+.experience-icon {
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 5px;
     background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
 }
 
