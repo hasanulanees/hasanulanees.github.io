@@ -464,6 +464,64 @@ button:hover {
     background: linear-gradient(45deg, #614385 0%, rgba(250, 250, 250, 0.1) 50%, #516395 100%);
 }
 
+.experience-item a {
+    color: #516395;
+}
+
+.list-project-rl li {
+    padding: 5px;
+}
+
+.role-header {
+    padding: 10px;
+    /* color: #516395; */
+    color: #516395;
+    border-radius: 5px;
+    border: 1px solid #516395;
+}
+
+.app-screenshots {
+    padding: 10px;
+}
+
+.app-screenshots img {
+    width: 100px;
+    padding: 5px;
+    background: #516395;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.p-list {
+    border: 1px solid #614385;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.list-project-rl li img {
+    width: 25px;
+    margin-right: 5px;
+    animation: pulse 1s linear infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
 
 /* Services */
 
