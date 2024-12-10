@@ -61,7 +61,7 @@ p {
     background: -webkit-linear-gradient(#614385, #516395);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(2px 2px #fff);
+    /* filter: drop-shadow(2px 2px #fff); */
 }
 
 h4 {
@@ -330,7 +330,8 @@ html {
     width: 60px;
     height: 3px;
     /* background-color: #4C5270; */
-    background: linear-gradient(#274472, #167D7F);
+    background: -webkit-linear-gradient(#614385, #516395);
+    /* background: linear-gradient(#274472, #167D7F); */
     margin: 10px auto;
 }
 
