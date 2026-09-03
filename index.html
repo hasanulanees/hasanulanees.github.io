@@ -4,30 +4,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <meta name="description" content="Portfolio of Hasanul Anees, a Full Stack Web Developer based in Abu Dhabi, UAE. Specializing in building scalable, secure, and high-performing web applications." />
+  <meta name="author" content="Hasanul Anees" />
+  <meta property="og:title" content="Hasanul Anees - Full Stack Web Developer" />
+  <meta property="og:description" content="Portfolio of Hasanul Anees, a Full Stack Web Developer based in Abu Dhabi, UAE." />
+  <meta property="og:type" content="website" />
 
-  <title>Hasanul Anees</title>
+  <title>Hasanul Anees | Full Stack Web Developer</title>
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-  <!--
-Reflux Template
-https://templatemo.com/tm-531-reflux
--->
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Additional CSS Files -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="assets/css/fontawesome.css" />
-  <link rel="stylesheet" href="assets/css/templatemo-style.css" />
-  <link rel="stylesheet" href="assets/css/owl.css" />
-  <link rel="stylesheet" href="assets/css/lightbox.css" />
 
+  <!-- DevIcons -->
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Animated Gradient Background -->
+  <div class="bg-animation" aria-hidden="true">
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
   <div id="page-wraper">
     <!-- Sidebar Menu -->
     <div class="responsive-nav">
@@ -35,147 +50,162 @@ https://templatemo.com/tm-531-reflux
       <div id="menu" class="menu">
         <i class="fa fa-times" id="menu-close"></i>
         <div class="container">
-          <div class="image">
-            <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
-          </div>
-
           <div class="author-content">
+            <div class="author-avatar">HA</div>
             <h4>Hasanul Anees</h4>
             <span>Full Stack Web Developer</span>
           </div>
-          <nav class="main-nav" role="navigation">
+
+          <nav class="main-nav" role="navigation" aria-label="Main navigation">
             <ul class="main-menu">
-              <li><a href="#section1">About Me</a></li>
-              <!-- <li><a href="#section5">Education</a></li> -->
+              <li><a href="#section1">About</a></li>
               <li><a href="#section2">Work Experience</a></li>
-              <li><a href="#section3">Skills & Tools</a></li>
+              <li><a href="#section3">Skills &amp; Tools</a></li>
               <li><a href="#section5">Main Projects</a></li>
               <li><a href="#section4">Contact Me</a></li>
             </ul>
           </nav>
+
           <div class="social-network">
             <ul class="soial-icons">
               <li>
-                <a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/hasanul-anees-14a65819a/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="mailto:hasanulanees@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://wa.me/971507401287" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-rss"></i></a>
+                <a href="https://github.com/hasanulanees" aria-label="GitHub"><i class="fa fa-github"></i></a>
               </li>
             </ul>
           </div>
+
           <div class="copyright-text">
-            <!-- <img style="width: 150px;" src="./assets/images/logo_anees.png"> -->
-            <p>Copyright Hasanul Anees @<span id="currentYear"></span> </p>
+            <p>Copyright Hasanul Anees @<span id="currentYear"></span></p>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Hero / Intro -->
+    <section class="hero-section" data-section="hero">
+      <div class="hero-content">
+        <div class="hero-avatar">HA</div>
+        <h1 class="hero-title">Hasanul Anees</h1>
+        <div class="hero-typed">
+          <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-subtitle">Abu Dhabi, UAE</p>
+        <div class="hero-actions">
+          <a href="#section4" class="btn-glow">Contact Me</a>
+          <a href="#section3" class="btn-outline">View Skills</a>
+        </div>
+      </div>
+      <a href="#section1" class="hero-scroll-down" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- About -->
     <section class="section about-me" data-section="section1">
       <div class="container">
-        <div class="section-heading">
-          <h2>About</h2>
+        <div class="section-heading reveal">
+          <h2 class="text-gradient">About</h2>
           <div class="line-dec"></div>
-          <span>
+        </div>
+        <div class="about-content">
+          <div class="about-text reveal">
             <p>
-              I’m a <strong>Full Stack Web Developer</strong> with <strong>6+ years of experience</strong> in building
-              complete,
-              end-to-end web applications. I create intuitive user interfaces and robust backend systems that are
-              scalable and secure.
+              I'm a <strong>Full Stack Web Developer</strong> with <strong>6+ years of experience</strong> in building
+              complete, end-to-end web applications. I create intuitive user interfaces and robust backend systems that
+              are scalable and secure.
             </p>
             <p>
               I focus on clean, maintainable code and delivering seamless user experiences, whether working
               independently or as part of a team.
             </p>
-          </span>
+          </div>
         </div>
-      </div>
-      <!-- <div class="container text-center">
-        <img style="width: 200px;border-radius: 10px;margin-bottom: 20px;" src="./assets/images/logo_anees.png">
-      </div> -->
-      <div class="container">
-        <div class="col-md-12">
-          <h4 class="text-center skills-header"><img
-              style="width: 40px;background: white;padding: 5px;margin-right: 5px;border-radius: 5px;"
-              src="./assets/images/diploma.png">Highest Education</h4>
-          <a href="https://www.uoc.ac.in/"><img style="width: 200px;" src="./assets/images/uoc-logo.png"></a><strong>
-            Bachelors's in Computer
-            Application(BCA) -
-            (2014-2017)</strong>
+
+        <div class="container education-container reveal">
+          <div class="col-md-12">
+            <div class="education-card">
+              <h4 class="education-header">
+                <span class="education-icon"><i class="fa fa-graduation-cap"></i></span>
+                Highest Education
+              </h4>
+              <div class="education-detail">
+                <a href="https://www.uoc.ac.in/" aria-label="University of Calicut">
+                  <img class="education-logo" src="./assets/images/uoc-logo.png" alt="University of Calicut logo">
+                </a>
+                <strong>Bachelor's in Computer Application (BCA) - (2014-2017)</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Work Experience -->
     <section class="section my-services" data-section="section2">
       <div class="container">
-        <div class="section-heading">
-          <h2>Work Experience</h2>
+        <div class="section-heading reveal">
+          <h2 class="text-gradient">Work Experience</h2>
           <div class="line-dec"></div>
         </div>
 
-        <div class="row">
-
-          <div class="col-md-12 experience-item">
-            <div class="row">
+        <div class="row timeline">
+          <div class="col-md-12 experience-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="row align-items-center">
               <div class="col-md-2">
-                <img class="" src="./assets/images/oasis-logo.png">
+                <img class="company-logo" src="./assets/images/oasis-logo.png" alt="Oasis Livestock LLC logo">
               </div>
               <div class="col-md-10">
-                <div class="">
-                  <h4> Full Stack Web Developer - <a href="https://oasislivestock.com/">Oasis Livestock LLC</a></h4>
-                  <strong>Abu Dhabi, UAE (June 2023 - present)</strong>
-                </div>
+                <h4>Full Stack Web Developer - <a href="https://oasislivestock.com/">Oasis Livestock LLC</a></h4>
+                <span class="company-period">Abu Dhabi, UAE (June 2023 - present)</span>
               </div>
             </div>
           </div>
 
-          <div class="col-md-12 experience-item">
-            <div class="row">
+          <div class="col-md-12 experience-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="row align-items-center">
               <div class="col-md-2">
-                <img src="./assets/images/fujtown-logo.png">
+                <img class="company-logo" src="./assets/images/fujtown-logo.png" alt="Fujtech logo">
               </div>
               <div class="col-md-10">
-                <div class="">
-                  <h4> Full Stack Web Developer - <a href="https://www.fujtek.com/">Fujtech, Fujtown</a></h4>
-                  <strong>Fujairah, UAE (June 2021 - June 2023)</strong>
-                </div>
+                <h4>Full Stack Web Developer - <a href="https://www.fujtek.com/">Fujtech, Fujtown</a></h4>
+                <span class="company-period">Fujairah, UAE (June 2021 - June 2023)</span>
               </div>
             </div>
           </div>
 
-          <div class="col-md-12 experience-item">
-            <div class="row">
+          <div class="col-md-12 experience-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="row align-items-center">
               <div class="col-md-2">
-                <img src="./assets/images/logo-micro.png">
+                <img class="company-logo" src="./assets/images/logo-micro.png" alt="Gargish logo">
               </div>
               <div class="col-md-10">
-                <div class="">
-                  <h4> Backend Developer - <a>Gargish (Freelance)</a></h4>
-                  <strong>Abu Dhabi, Khalifa City, UAE (Feb 2020 - March 2021)</strong>
-                </div>
+                <h4>Backend Developer - Gargish (Freelance)</h4>
+                <span class="company-period">Abu Dhabi, Khalifa City, UAE (Feb 2020 - March 2021)</span>
               </div>
             </div>
           </div>
 
-          <div class="col-md-12 experience-item">
-            <div class="row">
+          <div class="col-md-12 experience-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="row align-items-center">
               <div class="col-md-2">
-                <img src="./assets/images/logo-micro.png">
+                <img class="company-logo" src="./assets/images/logo-micro.png" alt="Microclouds logo">
               </div>
               <div class="col-md-10">
-                <div class="">
-                  <h4> Backend Developer - <a href="https://www.microclouds-india.com/">Microclouds</a></h4>
-                  <strong>Kerala, India (October 2017 - December 2019)</strong>
-                </div>
+                <h4>Backend Developer - <a href="https://www.microclouds-india.com/">Microclouds</a></h4>
+                <span class="company-period">Kerala, India (October 2017 - December 2019)</span>
               </div>
             </div>
           </div>
@@ -183,358 +213,284 @@ https://templatemo.com/tm-531-reflux
       </div>
     </section>
 
+    <!-- Skills & Tools -->
     <section class="section my-work" data-section="section3">
       <div class="container">
-        <div class="section-heading">
-          <h2>Skills & Tools</h2>
+        <div class="section-heading reveal">
+          <h2 class="text-gradient">Skills &amp; Tools</h2>
           <div class="line-dec"></div>
         </div>
-        <br>
-        <h4 class="text-center skills-header">Backend</h4>
-        <br>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+
+        <div class="skills-group">
+          <h4 class="skills-header reveal">Backend</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-php-plain colored"></i>
-                &nbsp;
-                Core PHP
-              </h5>
+                <span>Core PHP</span>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-laravel-original colored"></i>
-                Laravel
-              </h5>
+                <span>Laravel</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-codeigniter-plain colored"></i>
-                Codeigniter
-              </h5>
+                <span>Codeigniter</span>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-mysql-plain-wordmark"></i>
-                Mysql
-              </h5>
+                <span>MySQL</span>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-postgresql-plain colored"></i>
-                PostgreSQL
-              </h5>
+                <span>PostgreSQL</span>
+              </div>
             </div>
-          </div>
-
-
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-nodejs-plain colored"></i>
-                Node Js
-              </h5>
+                <span>Node Js</span>
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-npm-original-wordmark"></i>
-                NPM
-              </h5>
+                <span>NPM</span>
+              </div>
             </div>
           </div>
-
         </div>
-        <br>
-        <h4 class="text-center skills-header">Frontend</h4>
-        <br>
-        <div class="row">
 
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+        <div class="skills-group">
+          <h4 class="skills-header reveal">Frontend</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-react-original colored"></i>
-                React Js
-              </h5>
+                <span>React Js</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-vuejs-plain colored"></i>
-                Vue Js
-              </h5>
+                <span>Vue Js</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-livewire-plain-wordmark colored"></i>
-                Livewire
-              </h5>
+                <span>Livewire</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-html5-plain colored"></i>
-                HTML
-              </h5>
+                <span>HTML</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-css3-plain colored"></i>
-                CSS
-              </h5>
+                <span>CSS</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-jquery-plain colored"></i>
-                Jquery
-              </h5>
+                <span>Jquery</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-javascript-plain colored"></i>
-                JavaScript
-              </h5>
+                <span>JavaScript</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-bootstrap-plain colored"></i>
-                Bootstrap
-              </h5>
+                <span>Bootstrap</span>
+              </div>
             </div>
           </div>
         </div>
-        <br>
-        <h4 class="text-center skills-header"> Version Control</h4>
-        <br>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+
+        <div class="skills-group">
+          <h4 class="skills-header reveal">Version Control</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-github-original"></i>
-                Github
-              </h5>
+                <span>Github</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-git-plain"></i>
-                Git
-              </h5>
+                <span>Git</span>
+              </div>
             </div>
           </div>
         </div>
-        <br>
-        <h4 class="text-center skills-header">Server
-          Administration</h4>
-        <br>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
-                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>&nbsp;
-                AWS
-              </h5>
+
+        <div class="skills-group">
+          <h4 class="skills-header reveal">Server Administration</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="service-item reveal">
+                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                <span>AWS</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
-                <i class="devicon-putty-plain"></i> &nbsp;
-                Putty
-              </h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
+                <i class="devicon-putty-plain"></i>
+                <span>Putty</span>
+              </div>
             </div>
           </div>
         </div>
-        <br>
-        <h4 class="text-center skills-header">Other</h4>
-        <br>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+
+        <div class="skills-group">
+          <h4 class="skills-header reveal">Other</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-postman-plain colored"></i>
-                &nbsp;
-                Postman
-              </h5>
+                <span>Postman</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-composer-line"></i>
-                &nbsp;
-                Composer
-              </h5>
+                <span>Composer</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-vscode-plain colored"></i>
-                &nbsp;
-                Vscode
-              </h5>
+                <span>Vscode</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-firebase-plain colored"></i>
-                &nbsp;
-                Firebase
-              </h5>
+                <span>Firebase</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-google-plain colored"></i>
-                &nbsp;
-                Google
-              </h5>
+                <span>Google</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-jira-plain colored"></i>
-                JIRA
-              </h5>
+                <span>JIRA</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-slack-plain"></i>
-                &nbsp;
-                Slack
-              </h5>
+                <span>Slack</span>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="service-item">
-              <h5>
+            <div class="col-md-3">
+              <div class="service-item reveal">
                 <i class="devicon-json-plain"></i>
-                &nbsp;
-                JSON
-              </h5>
+                <span>JSON</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Main Projects -->
     <section class="section" data-section="section5">
       <div class="container">
-        <div class="section-heading">
-          <h2>Main Projects</h2>
+        <div class="section-heading reveal">
+          <h2 class="text-gradient">Main Projects</h2>
           <div class="line-dec"></div>
         </div>
-        <div class="row">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="project-item">
-                  <img style="width: 80px;border-radius: 10px;padding: 10px;"
-                    src="./assets/images/projects/zabehaty-logo.png">
-                  <h2>Zabehaty</h2>
-                  <p>Zabehaty is a mobile application, designed for you to order your fresh meat from the comfort of
-                    your home. Instead of having to visit your butcher, Zabehaty delivers your fresh meet right to your
-                    door step.</p>
-                  <p><i class="fa fa-globe"></i> <a href="https://zabehaty.com">Website</a>&nbsp;| <i
-                      class="fa fa-android"></i> <a
-                      href="https://play.google.com/store/apps/details?id=com.atp.zabehati">Android app</a>&nbsp;|
-                    <i class="fa fa-apple"></i> <a
-                      href="https://apps.apple.com/ae/app/zabehaty-%D8%B0%D8%A8%D9%8A%D8%AD%D8%AA%D9%8A/id1227769641">IOS
-                      App</a>
-                  </p>
 
-                </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="project-item reveal">
+              <div class="project-image">
+                <img src="./assets/images/projects/zabehaty-logo.png" alt="Zabehaty logo">
               </div>
-              <div class="col-md-12">
-                <div class="project-item">
-                  <img style="width: 80px;border-radius: 10px;padding: 10px;"
-                    src="./assets/images/projects/halal-logo.png">
-                  <h2>Halal Mazrana</h2>
-                  <p>Halal Mazrana application is the first Emirati application to provide modern services that enable
-                    all users of the application to complete their requests and obtain fresh carcasses and meat in all
-                    emirates of the country, and it is also considered the first digital platform of its kind that
-                    provides all veterinary services and support services that support local livestock keepers and
-                    producers, which helps Strongly in developing the livestock sector and enhancing its role in the
-                    national economy and achieving food security in the country. The application relies on the
-                    completion of all its work on direct purchase from local</p>
-                  <p><i class="fa fa-globe"></i> <a href="https://new.halalemarat.com/">Website</a>&nbsp;|
-                    <i class="fa fa-android"></i> <a
-                      href="https://play.google.com/store/apps/details?id=com.halalalemarat.halalalemarat&hl=en&gl=US">Android
-                      app</a>&nbsp;|
-                    <i class="fa fa-apple"></i> <a
-                      href="https://apps.apple.com/ae/app/halal-%D8%AD%D9%84%D8%A7%D9%84/id1516073045">IOS
-                      App</a>
-                  </p>
-                </div>
+              <h4 class="project-title">Zabehaty</h4>
+              <p>Zabehaty is a mobile application, designed for you to order your fresh meat from the comfort of
+                your home. Instead of having to visit your butcher, Zabehaty delivers your fresh meat right to your
+                door step.</p>
+              <div class="project-links">
+                <a href="https://zabehaty.com" target="_blank" rel="noopener"><i class="fa fa-globe"></i> Website</a>
+                <a href="https://play.google.com/store/apps/details?id=com.atp.zabehati" target="_blank" rel="noopener"><i class="fa fa-android"></i> Android app</a>
+                <a href="https://apps.apple.com/ae/app/zabehaty-%D8%B0%D8%A8%D9%8A%D8%AD%D8%AA%D9%8A/id1227769641" target="_blank" rel="noopener"><i class="fa fa-apple"></i> iOS App</a>
               </div>
-              <div class="col-md-12">
-                <div class="project-item">
-                  <img style="width: 80px;border-radius: 10px;padding: 10px;" src="./assets/images/thahabi-logo.jpg">
-                  <h2>Thahabi</h2>
-                  <p>THAHABI application is a pioneering qualitative leap in each of the Gulf countries to provide all
-                    types of jewellery from all stores distributed in the region and from all regions and cities, with
-                    guaranteed quality and calibre, competitive prices to market prices, with high professionalism and
-                    efficiency, which provides comfort and integrated service to the customer, enhances the quality of
-                    life standards in the country, as the application provided home delivery service or any place
-                    recommended by the customer.</p>
-                  <p><i class="fa fa-globe"></i> <a href="https://thahabi.net/">Website</a>&nbsp;|
-                    <i class="fa fa-android"></i> <a
-                      href="https://play.google.com/store/apps/details?id=com.oasis.golden.user">Android User
-                      app</a>&nbsp;|
-                    <i class="fa fa-apple"></i> <a
-                      href="https://apps.apple.com/ae/app/thahabi-%D8%B0%D9%87%D8%A8%D9%8A/id6477445687">IOS User
-                      App</a>&nbsp;|
-                    <i class="fa fa-android"></i> <a
-                      href="https://play.google.com/store/apps/details?id=com.oasis.golden.shop">Android Shop App</a>
-                    &nbsp;|
-                    <i class="fa fa-apple"></i> <a href="https://apps.apple.com/ae/app/t-shop/id6477780474">IOS Shop
-                      App</a>
-                  </p>
-                </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="project-item reveal">
+              <div class="project-image">
+                <img src="./assets/images/projects/halal-logo.png" alt="Halal Mazrana logo">
               </div>
-              <div class="col-md-12">
-                <div class="project-item">
-                  <img style="width: 80px;border-radius: 10px;padding: 10px;margin-bottom:4px;background: white;"
-                    src="./assets/images/projects/fujtown-logo2.png"><br>
-                  <h2>Fujtown</h2>
-                  <p>
-                    Fujtown is the first and only online business directory platform for Fujairah city & the East Coast
-                    Region where companies no matter how big or small can create a profile viewing to get more customers
-                    and gain credibility in their respective markets. </p>
-                  <p><i class="fa fa-globe"></i> <a href="https://www.fujtown.com/">Website</a></p>
-                </div>
+              <h4 class="project-title">Halal Mazrana</h4>
+              <p>Halal Mazrana application is the first Emirati application to provide modern services that enable
+                all users of the application to complete their requests and obtain fresh carcasses and meat in all
+                emirates of the country, and it is also considered the first digital platform of its kind that
+                provides all veterinary services and support services that support local livestock keepers and
+                producers.</p>
+              <div class="project-links">
+                <a href="https://new.halalemarat.com/" target="_blank" rel="noopener"><i class="fa fa-globe"></i> Website</a>
+                <a href="https://play.google.com/store/apps/details?id=com.halalalemarat.halalalemarat&hl=en&gl=US" target="_blank" rel="noopener"><i class="fa fa-android"></i> Android app</a>
+                <a href="https://apps.apple.com/ae/app/halal-%D8%AD%D9%84%D8%A7%D9%84/id1516073045" target="_blank" rel="noopener"><i class="fa fa-apple"></i> iOS App</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="project-item reveal">
+              <div class="project-image">
+                <img src="./assets/images/thahabi-logo.jpg" alt="Thahabi logo">
+              </div>
+              <h4 class="project-title">Thahabi</h4>
+              <p>THAHABI application is a pioneering qualitative leap in each of the Gulf countries to provide all
+                types of jewellery from all stores distributed in the region and from all regions and cities, with
+                guaranteed quality and calibre, competitive prices to market prices, with high professionalism and
+                efficiency.</p>
+              <div class="project-links">
+                <a href="https://thahabi.net/" target="_blank" rel="noopener"><i class="fa fa-globe"></i> Website</a>
+                <a href="https://play.google.com/store/apps/details?id=com.oasis.golden.user" target="_blank" rel="noopener"><i class="fa fa-android"></i> Android User app</a>
+                <a href="https://apps.apple.com/ae/app/thahabi-%D8%B0%D9%87%D8%A8%D9%8A/id6477445687" target="_blank" rel="noopener"><i class="fa fa-apple"></i> iOS User App</a>
+                <a href="https://play.google.com/store/apps/details?id=com.oasis.golden.shop" target="_blank" rel="noopener"><i class="fa fa-android"></i> Android Shop App</a>
+                <a href="https://apps.apple.com/ae/app/t-shop/id6477780474" target="_blank" rel="noopener"><i class="fa fa-apple"></i> iOS Shop App</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="project-item reveal">
+              <div class="project-image white-bg">
+                <img src="./assets/images/projects/fujtown-logo2.png" alt="Fujtown logo">
+              </div>
+              <h4 class="project-title">Fujtown</h4>
+              <p>Fujtown is the first and only online business directory platform for Fujairah city &amp; the East
+                Coast Region where companies no matter how big or small can create a profile viewing to get more
+                customers and gain credibility in their respective markets.</p>
+              <div class="project-links">
+                <a href="https://www.fujtown.com/" target="_blank" rel="noopener"><i class="fa fa-globe"></i> Website</a>
               </div>
             </div>
           </div>
@@ -542,47 +498,45 @@ https://templatemo.com/tm-531-reflux
       </div>
     </section>
 
+    <!-- Contact Me -->
     <section class="section contact-me" data-section="section4">
       <div class="container">
-        <div class="section-heading">
-          <h2>Contact Me</h2>
+        <div class="section-heading reveal">
+          <h2 class="text-gradient">Contact Me</h2>
           <div class="line-dec"></div>
         </div>
+
         <div class="row">
-          <div class="container">
-            <div class="row col-md-12">
-              <div class="col-md-6">
-                <div class="contact-item">
-                  <a href="mailto:hasanulanees@gmail.com" type="button">
-                    <img style="width: 40px;" src="./assets/images/gmail.png">
-                    <medium>hasanulanees@gmail.com</medium>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="contact-item">
-                  <a href="tel:+971507401287" type="button">
-                    <img style="width: 40px;" src="./assets/images/smartphone.png">
-                    <medium>+971507401287</medium>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="contact-item">
-                  <a href="https://wa.me/971507401287" type="button">
-                    <img style="width: 40px;" src="./assets/images/whatsapp.png">
-                    <medium>+971507401287</medium>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="contact-item">
-                  <a href="https://www.linkedin.com/in/hasanul-anees-14a65819a/" type="button">
-                    <img style="width: 40px;" src="./assets/images/linkedin.png">
-                    <medium>Linkdin</medium>
-                  </a>
-                </div>
-              </div>
+          <div class="col-md-6">
+            <div class="contact-item reveal reveal-left" data-delay="1">
+              <a href="mailto:hasanulanees@gmail.com" type="button">
+                <img class="contact-icon" src="./assets/images/gmail.png" alt="Email icon">
+                <span class="contact-label">hasanulanees@gmail.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item reveal reveal-right" data-delay="1">
+              <a href="tel:+971507401287" type="button">
+                <img class="contact-icon" src="./assets/images/smartphone.png" alt="Phone icon">
+                <span class="contact-label">+971507401287</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item reveal reveal-left" data-delay="2">
+              <a href="https://wa.me/971507401287" type="button">
+                <img class="contact-icon" src="./assets/images/whatsapp.png" alt="WhatsApp icon">
+                <span class="contact-label">+971507401287</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-item reveal reveal-right" data-delay="2">
+              <a href="https://www.linkedin.com/in/hasanul-anees-14a65819a/" type="button">
+                <img class="contact-icon" src="./assets/images/linkedin.png" alt="LinkedIn icon">
+                <span class="contact-label">LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>
@@ -591,16 +545,11 @@ https://templatemo.com/tm-531-reflux
   </div>
 
   <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
   <script src="assets/js/custom.js"></script>
+
   <script>
-    //according to loftblog tut
     $(".main-menu li:first").addClass("active");
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -610,7 +559,7 @@ https://templatemo.com/tm-531-reflux
 
     var showSection = function showSection(section, isAnimate) {
       var direction = section.replace(/#/, ""),
-        reqSection = $(".section").filter(
+        reqSection = $(".section, .hero-section").filter(
           '[data-section="' + direction + '"]'
         ),
         reqSectionPos = reqSection.offset().top - 0;
@@ -628,7 +577,7 @@ https://templatemo.com/tm-531-reflux
     };
 
     var checkSection = function checkSection() {
-      $(".section").each(function () {
+      $(".section, .hero-section").each(function () {
         var $this = $(this),
           topEdge = $this.offset().top - 80,
           bottomEdge = topEdge + $this.height(),
