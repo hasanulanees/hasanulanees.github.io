@@ -60,7 +60,12 @@ body {
   scrollbar-color: var(--accent-teal) var(--bg-2);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Sora", sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -112,9 +117,17 @@ a:hover {
 }
 
 @keyframes bgShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .bg-blob {
@@ -152,9 +165,19 @@ a:hover {
 }
 
 @keyframes blobFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(40px, -30px) scale(1.1); }
-  66% { transform: translate(-30px, 30px) scale(0.95); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(40px, -30px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-30px, 30px) scale(0.95);
+  }
 }
 
 .bg-grid {
@@ -168,8 +191,13 @@ a:hover {
 }
 
 @keyframes gridMove {
-  from { background-position: 0 0; }
-  to { background-position: 48px 48px; }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 48px 48px;
+  }
 }
 
 /* =============================================================
@@ -199,22 +227,87 @@ a:hover {
   width: 90px;
   height: 90px;
   margin: 0 auto 15px;
+
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-family: "Sora", sans-serif;
   font-size: 32px;
   font-weight: 800;
   color: #fff;
-  background: var(--gradient);
-  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.35);
+
+  /* Glossy 3D surface */
+  background:
+    radial-gradient(circle at 30% 22%,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.12) 22%,
+      transparent 45%),
+    var(--gradient);
+
+  /* 3D depth + neon glow */
+  box-shadow:
+    inset -7px -8px 14px rgba(0, 0, 0, 0.28),
+    inset 5px 6px 12px rgba(255, 255, 255, 0.25),
+    0 6px 12px rgba(0, 0, 0, 0.18),
+    0 15px 35px rgba(20, 184, 166, 0.35),
+    0 0 55px rgba(20, 184, 166, 0.18);
+
+  border: 2px solid rgba(255, 255, 255, 0.18);
+
+/* 3D perspective */
+  transform: perspective(500px) rotateX(5deg) rotateY(-7deg);
+
   animation: avatarPulse 4s ease-in-out infinite;
+  cursor: pointer;
+  /* Theme accent color on cursor interaction */
+  transition: box-shadow 0.3s ease;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
+/* Interactive 3D lift */
+.author-avatar:hover {
+  transform:
+    perspective(500px) rotateX(0deg) rotateY(0deg) translateY(-6px) scale(1.06);
+
+  box-shadow:
+    inset -5px -6px 12px rgba(0, 0, 0, 0.2),
+    inset 5px 6px 13px rgba(255, 255, 255, 0.3),
+    0 10px 18px rgba(0, 0, 0, 0.2),
+    0 25px 50px rgba(20, 184, 166, 0.45), /* var(--accent-teal) */
+    0 0 70px rgba(20, 184, 166, 0.3); /* var(--accent-teal) glow */
+}
+
+/* Smooth floating pulse */
 @keyframes avatarPulse {
-  0%, 100% { box-shadow: 0 8px 30px rgba(20, 184, 166, 0.3); }
-  50% { box-shadow: 0 12px 45px rgba(59, 130, 246, 0.5); }
+
+  0%,
+  100% {
+    transform:
+      perspective(500px) rotateX(5deg) rotateY(-7deg) translateY(0);
+  }
+
+  50% {
+    transform:
+      perspective(500px) rotateX(3deg) rotateY(-4deg) translateY(-5px);
+  }
+}
+
+
+@keyframes avatarPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 8px 30px rgba(20, 184, 166, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 12px 45px rgba(59, 130, 246, 0.5);
+  }
 }
 
 .author-content {
@@ -335,26 +428,73 @@ a:hover {
 }
 
 @keyframes heroFade {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 
 .hero-avatar {
   width: 120px;
   height: 120px;
   margin: 0 auto 28px;
+
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-family: "Sora", sans-serif;
   font-size: 44px;
   font-weight: 800;
   color: #fff;
-  background: var(--gradient);
-  box-shadow: 0 10px 45px rgba(20, 184, 166, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.15);
+
+  /* 3D gradient */
+  background:
+    radial-gradient(circle at 30% 25%,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0.08) 25%,
+      transparent 45%),
+    var(--gradient);
+
+  /* 3D depth + glow */
+  box-shadow:
+    inset -8px -10px 18px rgba(0, 0, 0, 0.28),
+    inset 6px 7px 14px rgba(255, 255, 255, 0.25),
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 25px 50px rgba(20, 184, 166, 0.35),
+    0 0 80px rgba(20, 184, 166, 0.2);
+
+  border: 3px solid rgba(255, 255, 255, 0.18);
+
+  /* Gives the avatar a slight 3D tilt */
+  transform: perspective(600px) rotateX(5deg) rotateY(-8deg);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  cursor: grab;
 }
+
+/* Floating / hover effect */
+.hero-avatar:hover {
+  transform:
+    perspective(600px) rotateX(0deg) rotateY(0deg) translateY(-8px) scale(1.04);
+
+  box-shadow:
+    inset -6px -8px 15px rgba(0, 0, 0, 0.2),
+    inset 6px 7px 16px rgba(255, 255, 255, 0.3),
+    0 15px 25px rgba(0, 0, 0, 0.2),
+    0 35px 70px rgba(20, 184, 166, 0.45), /* teal accent */
+    0 0 100px rgba(20, 184, 166, 0.3); /* teal glow */
+}
+
 
 .hero-title {
   font-size: 3.4rem;
@@ -387,8 +527,15 @@ a:hover {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-subtitle {
@@ -463,9 +610,19 @@ a:hover {
 }
 
 @keyframes scrollDot {
-  0% { opacity: 1; transform: translateY(0); }
-  70% { opacity: 0; transform: translateY(14px); }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  70% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 /* =============================================================
