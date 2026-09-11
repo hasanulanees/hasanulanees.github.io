@@ -66,6 +66,7 @@
               <li><a href="#experience">Work Experience</a></li>
               <li><a href="#skills">Skills &amp; Tools</a></li>
               <li><a href="#projects">Main Projects</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
               <li><a href="#resume">Resume</a></li>
               <li><a href="#contact">Contact Me</a></li>
             </ul>
@@ -617,6 +618,93 @@
       </div>
     </section>
 
+    <!-- Blogs -->
+    <section class="section my-blogs" data-section="blogs">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2 class="text-gradient">Blogs</h2>
+          <div class="line-dec"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <article class="blog-card reveal">
+              <div class="blog-cover">
+                <img class="blog-cover-img" src="./assets/images/blogs/blog-caching.jpg" alt="Code on a screen">
+                <span class="blog-category">Backend</span>
+              </div>
+              <div class="blog-body">
+                <span class="blog-date"><i class="fa fa-calendar-o"></i> Jan 2026</span>
+                <h4 class="blog-title">Scaling Laravel Apps with Redis Caching</h4>
+                <p>Practical patterns for caching database queries, sessions, and queues to handle high traffic without burning your DB.</p>
+                <div class="blog-full-content" hidden>
+                  <p>Redis isn't just a key-value store — used well, it becomes the shock absorber between your users and your database. In this article I walk through the cache topology I use on production Laravel projects: a read-through cache for expensive queries, stamped cache keys with version tags so invalidation stays simple, and separate stores for sessions and queues so one saturated queue never evicts hot data.</p>
+                  <p>We go beyond <code>Cache::remember</code>: handling stampede protection with atomic locks, choosing LRU vs. LFU policies, monitoring hit rates through Laravel Telescope, and the crucial failure mode — always falling back to the database gracefully when Redis is unavailable.</p>
+                  <ul>
+                    <li>Read-through vs. write-through caching strategies</li>
+                    <li>Cache stampede prevention with locks</li>
+                    <li>Memory policy tuning for production</li>
+                    <li>Integration with Laravel queues and broadcasts</li>
+                  </ul>
+                </div>
+                <a href="#" class="blog-read-more">Read More <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="blog-card reveal" data-delay="1">
+              <div class="blog-cover blog-cover-2">
+                <img class="blog-cover-img" src="./assets/images/blogs/blog-mysql.jpg" alt="Database servers">
+                <span class="blog-category">Database</span>
+              </div>
+              <div class="blog-body">
+                <span class="blog-date"><i class="fa fa-calendar-o"></i> Dec 2025</span>
+                <h4 class="blog-title">Understanding MySQL Indexing Basics</h4>
+                <p>A beginner-friendly guide to indexes, query performance, and the common pitfalls that slow down your queries.</p>
+                <div class="blog-full-content" hidden>
+                  <p>MySQL uses B-tree indexes by default, and understanding just that one data structure explains most performance behavior you'll see in production. This post covers how indexes speed up lookups, when they slow writes down, and why a poorly ordered composite index silently defeats itself.</p>
+                  <p>We work through real <code>EXPLAIN</code> output, the difference between covering and non-covering indexes, cardinality matters, and the classic mistake of putting a low-selectivity column first in a multi-column index. You'll leave knowing how to inspect slow query logs and fix the offenders with minimal schema changes.</p>
+                  <ul>
+                    <li>B-tree basics and why order matters</li>
+                    <li>Reading and interpreting EXPLAIN output</li>
+                    <li>Covering indexes and included columns</li>
+                    <li>Monitoring with slow query logs</li>
+                  </ul>
+                </div>
+                <a href="#" class="blog-read-more">Read More <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="blog-card reveal" data-delay="2">
+              <div class="blog-cover blog-cover-3">
+                <img class="blog-cover-img" src="./assets/images/blogs/blog-docker.jpg" alt="Server room">
+                <span class="blog-category">DevOps</span>
+              </div>
+              <div class="blog-body">
+                <span class="blog-date"><i class="fa fa-calendar-o"></i> Nov 2025</span>
+                <h4 class="blog-title">Deploying PHP Apps with Docker &amp; Nginx</h4>
+                <p>Step-by-step setup for containerizing your PHP application with a lean Nginx reverse proxy in production.</p>
+                <div class="blog-full-content" hidden>
+                  <p>Containers make PHP deployments reproducible, but only if the image is designed with production in mind. Here I share the multi-stage Dockerfile and Docker Compose stack I use: a minimal PHP-FPM runtime image without build tools, a stateless Nginx sidecar serving static assets, and a shared volume setup that keeps code and PHP sessions consistent across replicas.</p>
+                  <p>We also cover health checks, zero-downtime rollouts, graceful shutdown handling so queued jobs finish, and the Nginx upstream configuration that lets you scale FPM containers without touching application code.</p>
+                  <ul>
+                    <li>Multi-stage builds for small images</li>
+                    <li>Nginx + PHP-FPM upstream wiring</li>
+                    <li>Health checks and graceful shutdown</li>
+                    <li>Backing up volumes and the database</li>
+                  </ul>
+                </div>
+                <a href="#" class="blog-read-more">Read More <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Resume -->
     <section class="section resume" data-section="resume">
       <div class="container">
@@ -688,6 +776,25 @@
     </section>
   </div>
 
+  <!-- Blog Detail Modal -->
+  <div class="blog-modal" id="blogModal" aria-hidden="true">
+    <div class="blog-modal-backdrop" data-close-modal></div>
+    <div class="blog-modal-box" role="dialog" aria-modal="true" aria-labelledby="blogModalTitle">
+      <div class="blog-modal-cover">
+        <img id="blogModalImg" src="" alt="">
+        <button type="button" class="blog-modal-close" aria-label="Close" data-close-modal><i class="fa fa-times"></i></button>
+      </div>
+      <div class="blog-modal-body">
+        <div class="blog-modal-meta">
+          <span class="blog-category" id="blogModalCategory"></span>
+          <span class="blog-date" id="blogModalDate"></span>
+        </div>
+        <h3 class="blog-modal-title" id="blogModalTitle"></h3>
+        <div class="blog-modal-content" id="blogModalContent"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -752,6 +859,52 @@
 
     $(window).scroll(function () {
       checkSection();
+    });
+
+    // Blog detail modal
+    var blogModal = document.getElementById('blogModal');
+
+    function openBlogModal(card) {
+      var img = card.querySelector('.blog-cover-img');
+      var cat = card.querySelector('.blog-category');
+      var date = card.querySelector('.blog-date');
+      var title = card.querySelector('.blog-title');
+      var full = card.querySelector('.blog-full-content');
+
+      if (img) {
+        blogModal.querySelector('#blogModalImg').src = img.getAttribute('src');
+        blogModal.querySelector('#blogModalImg').alt = img.getAttribute('alt');
+      }
+      blogModal.querySelector('#blogModalCategory').textContent = cat ? cat.textContent.trim() : '';
+      blogModal.querySelector('#blogModalDate').textContent = date ? date.textContent.trim() : '';
+      blogModal.querySelector('#blogModalTitle').textContent = title ? title.textContent.trim() : '';
+      blogModal.querySelector('#blogModalContent').innerHTML = full ? full.innerHTML : '';
+      blogModal.classList.add('open');
+      document.body.classList.add('modal-open');
+      blogModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeBlogModal() {
+      blogModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+      blogModal.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('.blog-read-more').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        openBlogModal(link.closest('.blog-card'));
+      });
+    });
+
+    blogModal.querySelectorAll('[data-close-modal]').forEach(function (el) {
+      el.addEventListener('click', closeBlogModal);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && blogModal.classList.contains('open')) {
+        closeBlogModal();
+      }
     });
   </script>
 </body>
