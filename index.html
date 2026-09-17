@@ -153,17 +153,20 @@
 
     <!-- Hero / Intro -->
     <section class="hero-section" data-section="hero">
-      <div class="hero-content">
-        <div class="hero-avatar">HA</div>
-        <h1 class="hero-title">Hasanul Anees</h1>
-        <div class="hero-typed">
-          <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+      <div class="hero-layout">
+        <div class="hero-content">
+          <div class="hero-avatar">HA</div>
+          <h1 class="hero-title">Hasanul Anees</h1>
+          <div class="hero-typed">
+            <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+          </div>
+          <p class="hero-subtitle">Abu Dhabi, UAE</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-glow">Contact Me</a>
+            <a href="#skills" class="btn-outline">View Skills</a>
+          </div>
         </div>
-        <p class="hero-subtitle">Abu Dhabi, UAE</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-glow">Contact Me</a>
-          <a href="#skills" class="btn-outline">View Skills</a>
-        </div>
+        <div class="hero-globe3d" id="heroGlobe3d" aria-hidden="true"></div>
       </div>
       <a href="#about" class="hero-scroll-down" aria-label="Scroll down">
         <span></span>
@@ -758,6 +761,9 @@
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/three/three.min.js"></script>
+  <script src="vendor/three/CSS3DRenderer.js"></script>
+  <script src="assets/js/globe3d.js"></script>
   <script src="assets/js/custom.js"></script>
 
   <script>
