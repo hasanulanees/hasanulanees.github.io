@@ -440,7 +440,7 @@ a:hover {
 
 .hero-globe3d {
   position: relative;
-  width: min(420px, 76vw);
+  width: min(500px, 76vw);
   aspect-ratio: 1;
   pointer-events: none;
   flex-shrink: 0;
